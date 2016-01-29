@@ -10,6 +10,7 @@ import (
 	"github.com/sergei-svistunov/gorpc/transport/http_json/adapter"
 
 	// Import handlers
+	handlerCalcSum "github.com/sergei-svistunov/gorpc-tutor/server/handlers/calc/sum"
 	handlerHelloWorld "github.com/sergei-svistunov/gorpc-tutor/server/handlers/hello/world"
 )
 
@@ -18,6 +19,7 @@ func main() {
 
 	hm.MustRegisterHandlers(
 		handlerHelloWorld.NewHandler(),
+		handlerCalcSum.NewHandler(),
 	)
 
 	// Base API location
